@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth'
 import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
-  // isAuthenticated() {
-  //   throw new Error('Method not implemented.');
-  // }
+  currentUser: any;
 
   constructor(private fireAuth:AngularFireAuth,private router:Router) { }
   loggedIn(){
@@ -18,7 +17,6 @@ export class AuthServiceService {
   login(email:string,password:string){
     this.fireAuth.signInWithEmailAndPassword(email,password).then( res =>{
      localStorage.setItem('token','true')
-
      if(res.user?.emailVerified == true){
       this.router.navigate(['/layout/home.'])
      }else{

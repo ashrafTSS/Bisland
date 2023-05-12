@@ -8,6 +8,7 @@ import { AuthServiceService } from 'src/app/service/auth-service.service';
 })
 export class HeaderComponent implements OnInit {
 
+  email : string = 'Profile'
   constructor(private auth:AuthServiceService){
 
   }
