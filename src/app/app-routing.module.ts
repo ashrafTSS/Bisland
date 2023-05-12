@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { AuthComponent } from './auth/auth/auth.component';
+import { AuthguardGuard } from './authguard.guard';
 
 const routes: Routes = [
   // {path: '', redirectTo : 'layout', pathMatch: 'full'},
-{path:'layout',component:LayoutComponent,
+{path:'layout',component:LayoutComponent, canActivate : [AuthguardGuard],
 loadChildren:() => import('./layout/layout.module').then((l) => l.LayoutModule)},
 
 {path: '', redirectTo : 'auth/login', pathMatch: 'full'},

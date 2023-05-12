@@ -5,13 +5,26 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthServiceService {
+  // isAuthenticated() {
+  //   throw new Error('Method not implemented.');
+  // }
 
   constructor(private fireAuth:AngularFireAuth,private router:Router) { }
+  loggedIn(){
+    return localStorage.getItem('token')
+  }
 
   //login method
   login(email:string,password:string){
-    this.fireAuth.signInWithEmailAndPassword(email,password).then(()=>{
+    this.fireAuth.signInWithEmailAndPassword(email,password).then( res =>{
      localStorage.setItem('token','true')
+
+     if(res.user?.emailVerified == true){
+      this.router.navigate(['/layout/home.'])
+     }else{
+        this.router.navigate(['/auth/login'])
+     }
+
      this.router.navigate(['/layout/home'])
     },err =>{
       alert(err.message)
@@ -24,7 +37,7 @@ export class AuthServiceService {
    this.fireAuth.createUserWithEmailAndPassword(email,password).then(res =>{
     alert('Register has successfully created')
     this.router.navigate(['/auth/login'])
-    this.sendEmailForVarification(res.user)
+    // this.SendVerficationEmail(res.user)
    },err =>{
     alert(err.message)
     this.router.navigate(['/auth/register'])
@@ -42,20 +55,23 @@ export class AuthServiceService {
   }
 
   //forget password
-  forgetPassword(email:string){
-    this.fireAuth.sendPasswordResetEmail(email).then(()=>{
-      this.router.navigate(['/auth/varify-email'])
-    },err =>{
-     alert('Something went wrong')
-    })
-  }
+  // forgetPassword(email:string){
+  //   this.fireAuth.sendPasswordResetEmail(email).then(()=>{
+  //     this.router.navigate(['/auth/varify-email'])
+  //   },err =>{
+  //    alert('Something went wrong')
+  //   })
+  // }
 
   //email varification
-  sendEmailForVarification(user : any){
-     user.sendEmailVarification().then((res : any) =>{
-      this.router.navigate(['/auth/varify-email'])
-     },(err : any) =>{
-      alert('Something went wrong not able to send')
-     })
-  }
+  // SendVerficationEmail(user: any){
+
+  //   this.fireAuth.currentUser.then(u => u?.sendEmailVerification())
+  //     .then(() =>{
+  //       this.router.navigate(['/auth/varify-email']);
+  //     }, (err: any) =>{
+  //         alert('Something Went Wrong. Not able to send mail to registered Email.');
+  //     })
+  // }
+
 }
