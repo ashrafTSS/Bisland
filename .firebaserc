@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bisland-6dc7b": {
+      "hosting": {
+        "bisLand": [
+          "bisland-6dc7b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bisland-6dc7b"
+  }
+}

@@ -51,7 +51,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -91,8 +97,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "bisLand:build:production",
+            "firebaseProject": "bisland-6dc7b",
+            "firebaseHostingSite": "bisland-6dc7b"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5637d708-77ae-4dfe-9a1a-7a288cabe132"
   }
 }
