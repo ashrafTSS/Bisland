@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth'
 import { Router } from '@angular/router';
-
+import { Observable } from 'rxjs/internal/Observable';
+import * as firebase from 'firebase/auth';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
-  currentUser: any;
+  userData: Observable<firebase.User> | any;
 
-  constructor(private fireAuth:AngularFireAuth,private router:Router) { }
+  constructor(private fireAuth:AngularFireAuth,private router:Router) {
+    this.userData = fireAuth.authState;
+   }
   loggedIn(){
     return localStorage.getItem('token')
   }

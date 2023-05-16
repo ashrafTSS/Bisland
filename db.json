@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "firstname": "ashraf",
+      "lastname": "ali",
+      "birthdate": "2023-05-05",
+      "gender": "m",
+      "project": "learning/others",
+      "company": "tecnovators",
+      "jobExperience": 1,
+      "salary": 12,
+      "profile": "team-3.jpg",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
