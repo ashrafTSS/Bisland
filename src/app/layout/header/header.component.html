@@ -14,11 +14,13 @@
         <li><a class="nav-link scrollto " routerLink="portfolio">Portfolio</a></li>
         <li><a class="nav-link scrollto" routerLink="team">Team</a></li>
         <li><a class="nav-link scrollto" routerLink="contact">Contact</a></li>
-        <li><a class="nav-link scrollto" routerLink="company">Company</a></li>
+        <li><a class="nav-link scrollto" routerLink="company">Employee</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <!-- {{ (auth.userData | async)?.email}} -->
             {{email}}
+            <!-- {{email }} -->
+            <!-- {{ (auth.userData | async)?.email }} -->
+            <!-- {{ user.email }} -->
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item" (click)="logout()">Logout</a></li>

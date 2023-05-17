@@ -16,9 +16,10 @@ export class ForgetComponent implements OnInit {
 
   }
 
-  // forget(){
-  //   this.auth.forgetPassword(this.email)
-  //     this.email = ''
-  // }
+  //forget password
+  forget(){
+    this.auth.forgotPassword(this.email)
+      this.email = ''
+  }
 
 }

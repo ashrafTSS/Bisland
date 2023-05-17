@@ -12,7 +12,7 @@
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="email" class="form-control" name="email" [(ngModel)]="email">
                       </div>
-                      <button type="button" class="btn btn-info">Send Link</button>
+                      <button type="button" class="btn btn-info" (click)="forget()">Send Link</button>
                       <div class="row">
                           <div class="col-md-6 padd">
                               <a routerLink="/auth/login" style="text-decoration: none;">Back to login ? <span class="text-danger">Login</span></a>
