@@ -14,10 +14,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CompanyComponent } from './company/company.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-// import { HttpLoaderFactory } from '../app.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule } from '@angular/common/http';
 import { ProjectComponent } from './project/project.component';
 
 
@@ -37,13 +34,6 @@ import { ProjectComponent } from './project/project.component';
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    TranslateModule.forChild({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: TranslateHttpLoader,
-          deps: [HttpClient]
-      }
-  })
   ],
   exports : [],
   providers: [],
@@ -51,6 +41,3 @@ import { ProjectComponent } from './project/project.component';
 })
 export class LayoutModule { }
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
-}

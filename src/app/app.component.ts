@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TranslateLoader, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +7,7 @@ import { TranslateLoader, TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'bisLand';
-  translate: any;
-  lang : any;
+  constructor(){
 
-  constructor(translate : TranslateService){
-    translate.setDefaultLang('en');
-    translate.addLangs(['en','ar']);
-  }
-  switchLang(lang: string) {
-    this.translate.use(lang)
   }
 }
