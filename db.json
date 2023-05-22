@@ -3,13 +3,13 @@
     {
       "firstname": "ashraf",
       "lastname": "ali",
-      "birthdate": "2023-05-05",
+      "birthdate": "2023-05-22",
       "gender": "m",
       "project": "learning/others",
-      "company": "tecnovators",
-      "jobExperience": 2,
-      "salary": 15,
-      "profile": "team-3.jpg",
+      "company": "zoho",
+      "jobExperience": 1,
+      "salary": 12,
+      "profile": "team-1.jpg",
       "id": 1
     }
   ],

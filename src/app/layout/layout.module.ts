@@ -16,6 +16,8 @@ import { CompanyComponent } from './company/company.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectComponent } from './project/project.component';
+import { EmpInfoComponent } from './emp-info/emp-info.component';
+import { RxjComponent } from './rxj/rxj.component';
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { ProjectComponent } from './project/project.component';
     ContactComponent,PortfolioComponent,
     HeaderComponent,
     FooterComponent,
-    TeamComponent,AboutComponent, TopbarComponent, CompanyComponent, ProjectComponent
+    TeamComponent,AboutComponent, TopbarComponent, CompanyComponent, ProjectComponent, EmpInfoComponent, RxjComponent
   ],
   imports: [
     LayoutRoutingModule,

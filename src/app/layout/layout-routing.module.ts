@@ -8,6 +8,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
 import { CompanyComponent } from './company/company.component';
+import { EmpInfoComponent } from './emp-info/emp-info.component';
+import { RxjComponent } from './rxj/rxj.component';
 
 
 const routes: Routes = [
@@ -18,7 +20,10 @@ const routes: Routes = [
 {path:'portfolio',component:PortfolioComponent},
 {path:'team',component:TeamComponent},
 {path:'contact',component:ContactComponent},
-{path:'company',component:CompanyComponent}
+{path:'company',component:CompanyComponent,children:[
+  {path:'empinfo',component:EmpInfoComponent}
+]},
+{path:'rxjs',component:RxjComponent}
 ]
 // }]
 

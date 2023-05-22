@@ -14,12 +14,15 @@
                   <span class="name">{{project.firstname |titlecase}} {{project.lastname |titlecase}}</span>
               </div>
 
-              <div class="col-md-2 d-flex justify-content-center align-items-center">
+              <div class="col-md-2 d-flex justify-content-center align-items-center" routerLink="empinfo">
                   <div class="btn-group" role="group">
+                    <!-- <button type="button" class="btn btn-outline-warning btn-sm">View</button> -->
                       <button type="button" class="btn btn-outline-success"
                           (click)="editProject()">Edit</button>
                       <button type="button" class="btn btn-outline-danger"
                         (click)="deleteProject()">Delete</button>
+                        <button type="button" class="btn btn-outline-warning"
+                        (click)="viewProject()">View</button>
                   </div>
               </div>
 

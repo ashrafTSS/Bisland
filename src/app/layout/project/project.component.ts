@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from 'src/app/model/project..model';
 
 @Component({
@@ -11,8 +12,10 @@ export class ProjectComponent implements OnInit {
   @Input() project!:Project
   @Output() onRemoveProject = new EventEmitter<number>()
   @Output() onEditProject = new EventEmitter<number>()
+  @Output() onViewProject = new EventEmitter<number>()
 
-  constructor(){
+
+  constructor(private route:Router){
     this.project = {
       firstname: '',
       lastname: '',
@@ -38,6 +41,11 @@ export class ProjectComponent implements OnInit {
   //edit project
   editProject(){
     this.onEditProject.emit(this.project.id)
+  }
+
+  viewProject(){
+    this.onViewProject.emit(this.project.id)
+   this.route.navigate(['/empinfo'])
   }
 
 
