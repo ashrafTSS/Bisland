@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { from, map, pluck, toArray } from 'rxjs';
+import { Subscription, from, interval, map, pluck, tap, toArray } from 'rxjs';
 
 @Component({
   selector: 'app-rxj',
@@ -7,6 +7,7 @@ import { from, map, pluck, toArray } from 'rxjs';
   styleUrls: ['./rxj.component.css']
 })
 export class RxjComponent {
+  myColor: string = '';
 
   constructor(){}
 
@@ -59,5 +60,39 @@ export class RxjComponent {
 
     })
   }
+
+  //tap
+  tapCh(){
+    let checkSt:Subscription
+    const source = interval(2000)
+    const color = ['red','blue','pink','green','brown']
+    checkSt = source.pipe(
+      tap(res=>{
+        this.myColor = color[res]
+        console.log('tab before => ' + res);
+
+        if(res == 5){
+          checkSt.unsubscribe()
+        }
+      }),
+      map(res => color[res]),
+      tap(res=>{console.log('tap after => ' + res);
+      })
+      )
+    .subscribe(res=>{
+      console.log(res);
+      this.print(res)
+
+    })
+
+  }
+
+  //element
+  print(val: string){
+    const el = document.createElement('li')
+    el.innerText = val
+    document.getElementById('tapId')?.appendChild(el)
+  }
+
 
 }

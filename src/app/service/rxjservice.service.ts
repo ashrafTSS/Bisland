@@ -11,6 +11,7 @@ export class RxjserviceService {
 
   user = 'https://jsonplaceholder.typicode.com/users'
 
+
   getUser():Observable<any> | any{
     this.http.get(this.user)
   }

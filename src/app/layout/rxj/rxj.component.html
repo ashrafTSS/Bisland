@@ -19,4 +19,13 @@
         <button type="button" class="btn btn-warning btn-sm" (click)="onPlunk()">Plunk</button>
       </div>
     </div>
+    <div class="row" [ngStyle]="{'color' : myColor}">
+      <div class="col-2">
+        <ul id="tapId">
+        </ul>
+      </div>
+      <div class="col-10">
+        <button type="button" class="btn btn-success btn-sm" (click)="tapCh()">Tap</button>
+      </div>
+    </div>
   </div>
