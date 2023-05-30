@@ -8,15 +8,15 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto " routerLinkActive="active" routerLink="home">Home</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="about">About</a></li>
-        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="service">Services</a></li>
-        <li><a class="nav-link scrollto " routerLinkActive="active"  routerLink="portfolio">Portfolio</a></li>
-        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="team">Team</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active"  routerLink="contact">Contact</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="company">Employee</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="rxjs">RxjsProject</a></li>
-        <li class="nav-item dropdown">
+        <li><a class="nav-link scrollto " routerLinkActive="active" routerLink="home">{{'header.menu.list1' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="about">{{'header.menu.list2' | translate}}</a></li>
+        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="service">{{'header.menu.list3' | translate}}</a></li>
+        <li><a class="nav-link scrollto " routerLinkActive="active"  routerLink="portfolio">{{'header.menu.list4' | translate}}</a></li>
+        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="team">{{'header.menu.list5' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active"  routerLink="contact">{{'header.menu.list6' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="company">{{'header.menu.list7' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="rxjs">{{'header.menu.list8' | translate}}</a></li>
+        <li class="nav-item dropdown mx-3">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{email}}
             <!-- {{email }} -->
@@ -27,6 +27,18 @@
             <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
           </ul>
         </li>
+
+        <!-- change language  -->
+        <div class="mx-3">
+          <ul class="d-flex " style="padding-top: 3px;">
+            <li class="mx-3 " style="list-style: none;border-right: 2px solid black;padding-right: 10px;">
+              <a [class.active]="switchLang==='ar'" class="text-decoration-none text-secondary "(click)="selectedLanguage('ar')">AR</a>
+            </li>
+            <li style="list-style: none;">
+              <a [class.active]="switchLang==='en'" class="text-decoration-none text-secondary" (click)="selectedLanguage('en')">En</a>
+            </li>
+          </ul>
+        </div>
 <li>
 
         </li>

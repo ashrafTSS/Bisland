@@ -43,10 +43,9 @@ export class ProjectComponent implements OnInit {
     this.onEditProject.emit(this.project.id)
   }
 
-  viewProject(){
-    this.onViewProject.emit(this.project.id)
-   this.route.navigate(['/empinfo'])
-  }
+  // viewProject(){
+  //  this.route.navigate(['/layout/empinfo'])
+  // }
 
 
 }

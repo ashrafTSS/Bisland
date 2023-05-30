@@ -20,9 +20,8 @@ const routes: Routes = [
 {path:'portfolio',component:PortfolioComponent},
 {path:'team',component:TeamComponent},
 {path:'contact',component:ContactComponent},
-{path:'company',component:CompanyComponent,children:[
-  {path:'empinfo',component:EmpInfoComponent}
-]},
+{path:'company',component:CompanyComponent},
+{path:'empinfo',component:EmpInfoComponent},
 {path:'rxjs',component:RxjComponent}
 ]
 // }]

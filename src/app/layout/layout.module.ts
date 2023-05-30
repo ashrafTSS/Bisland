@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'
-import { BrowserModule } from '@angular/platform-browser';
 import { LayoutRoutingModule } from '../layout/layout-routing.module';
 import { LayoutComponent } from '../layout/layout/layout.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectComponent } from './project/project.component';
 import { EmpInfoComponent } from './emp-info/emp-info.component';
 import { RxjComponent } from './rxj/rxj.component';
+import { LangTranslateModule } from '../lang-translate/lang-translate.module';
 
 
 @NgModule({
@@ -36,6 +36,7 @@ import { RxjComponent } from './rxj/rxj.component';
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
+    LangTranslateModule
   ],
   exports : [],
   providers: [],

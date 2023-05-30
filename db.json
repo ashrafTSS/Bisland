@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "firstname": "ashraf",
-      "lastname": "ali",
-      "birthdate": "2023-05-22",
+      "firstname": "1",
+      "lastname": "12",
+      "birthdate": "2023-05-24",
       "gender": "m",
       "project": "learning/others",
-      "company": "zoho",
-      "jobExperience": 1,
-      "salary": 12,
+      "company": "12",
+      "jobExperience": 12,
+      "salary": 121,
       "profile": "team-1.jpg",
       "id": 1
     }
