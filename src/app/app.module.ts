@@ -8,9 +8,11 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { HttpClientModule } from '@angular/common/http';
 
-
+//language translator
+import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { TranslateLoader,TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule ,
+    HttpClientModule,
+    TranslateModule.forRoot({
+     loader:{
+      provide:TranslateLoader,
+      useFactory: httpTranslateLoader,
+      deps:[HttpClient]
+     }
+    }),
     AngularFireModule.initializeApp(environment.firebase),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
@@ -31,3 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//AOT compilation support
+export function httpTranslateLoader(http:HttpClient){
+  return new TranslateHttpLoader(http)
+}

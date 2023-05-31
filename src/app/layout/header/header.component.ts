@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from 'src/app/service/auth-service.service';
 import { Observable } from 'rxjs/internal/Observable';
 import firebase from 'firebase/compat/app';
-import { HeaderService } from './header.service';
 import { TranslateService } from '@ngx-translate/core';
 
 // interface User {
@@ -19,43 +18,24 @@ export class HeaderComponent implements OnInit {
 
   email : string = 'User'
 
-  //language change
-  switchLang:any
-  browserLang:any
   user$ = this.auth.userData
-  constructor(public auth:AuthServiceService,private header:HeaderService,
-    private translate:TranslateService){
-     this.header.selectLang.subscribe(res=>{
-      this.switchLang = res
-      translate.use(res)
-     })
-
-     translate.addLangs(['ar','en'])
+  constructor(public auth:AuthServiceService,public translate:TranslateService){
+     //language
+     translate.addLangs(['en','ar'])
      translate.setDefaultLang('en')
-     translate.use('en')
-     this.browserLang = translate.getDefaultLang()
-  }
-
-  ngOnInit(): void {
 
   }
 
+  //language change method
+  switchLang(lang:string){
+     this.translate.use(lang)
+  }
 
+  ngOnInit(): void {}
+
+  //logout
   logout(){
     this.auth.logout()
-  }
-
-  //language change
-
-  selectedLanguage(lang){
-   console.log(lang);
-  //  this.switchLang = lang
-  this.header.selectLang.next(lang)
-
-  }
-
-  languageChange(){
-    this.translate.use(this.browserLang.match(/ar|en/)? this.browserLang : 'en')
   }
 
 }

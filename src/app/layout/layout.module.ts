@@ -17,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectComponent } from './project/project.component';
 import { EmpInfoComponent } from './emp-info/emp-info.component';
 import { RxjComponent } from './rxj/rxj.component';
-import { LangTranslateModule } from '../lang-translate/lang-translate.module';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { LangTranslateModule } from '../lang-translate/lang-translate.module';
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    LangTranslateModule
+    TranslateModule
   ],
   exports : [],
   providers: [],

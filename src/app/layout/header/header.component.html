@@ -2,20 +2,20 @@
  <header id="header" class="d-flex align-items-center position-fixed w-100">
   <div class="container d-flex align-items-center justify-content-between">
 
-    <h1 class="logo"><a href="index.html">BizLand<span>.</span></a></h1>
+    <h1 class="logo"><a href="index.html">{{'header.title' | translate}}<span>.</span></a></h1>
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto " routerLinkActive="active" routerLink="home">{{'header.menu.list1' | translate}}</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="about">{{'header.menu.list2' | translate}}</a></li>
-        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="service">{{'header.menu.list3' | translate}}</a></li>
-        <li><a class="nav-link scrollto " routerLinkActive="active"  routerLink="portfolio">{{'header.menu.list4' | translate}}</a></li>
-        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="team">{{'header.menu.list5' | translate}}</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active"  routerLink="contact">{{'header.menu.list6' | translate}}</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="company">{{'header.menu.list7' | translate}}</a></li>
-        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="rxjs">{{'header.menu.list8' | translate}}</a></li>
+        <li><a class="nav-link scrollto " routerLinkActive="active" routerLink="home">{{'header.item1' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="about">{{'header.item2' | translate}}</a></li>
+        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="service">{{'header.item3' | translate}}</a></li>
+        <li><a class="nav-link scrollto " routerLinkActive="active"  routerLink="portfolio">{{'header.item4' | translate}}</a></li>
+        <li><a class="nav-link scrollto"  routerLinkActive="active" routerLink="team">{{'header.item5' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active"  routerLink="contact">{{'header.item6' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="company">{{'header.item7' | translate}}</a></li>
+        <li><a class="nav-link scrollto" routerLinkActive="active" routerLink="rxjs">{{'header.item8' | translate}}</a></li>
         <li class="nav-item dropdown mx-3">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{email}}
@@ -28,19 +28,14 @@
           </ul>
         </li>
 
-        <!-- change language  -->
-        <div class="mx-3">
-          <ul class="d-flex " style="padding-top: 3px;">
-            <li class="mx-3 " style="list-style: none;border-right: 2px solid black;padding-right: 10px;">
-              <a [class.active]="switchLang==='ar'" class="text-decoration-none text-secondary "(click)="selectedLanguage('ar')">AR</a>
-            </li>
-            <li style="list-style: none;">
-              <a [class.active]="switchLang==='en'" class="text-decoration-none text-secondary" (click)="selectedLanguage('en')">En</a>
-            </li>
-          </ul>
-        </div>
-<li>
+        <!-- language  -->
+        <select name="" class="form-select" #selectLang (change)="switchLang(selectLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language" [selected]="language === translate.currentLang">
+            {{language}}
+          </option>
+        </select>
 
+         <li>
         </li>
       </ul>
 

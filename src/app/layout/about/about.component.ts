@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
@@ -14,6 +15,7 @@ export class AboutComponent {
   wordpress:number = 90;
   photoshop:number = 55;
 
+  constructor(private translate:TranslateService){}
   // happy client
   projecthappy : number = 0
   projectCountStop:any = setInterval(()=>{

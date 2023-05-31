@@ -1,0 +1,72 @@
+{
+  "header" : {
+      "title" :"BizLand",
+      "item1" : "Home",
+      "item2" : "About",
+      "item3" : "Service",
+      "item4" : "Portfolio",
+      "item5" : "Team",
+      "item6" : "Contact",
+      "item7" : "Employee",
+      "item8" : "RxjsProject"
+     },
+
+     "home" : {
+       "h1" : "Welcome to",
+       "span" : "BizLand",
+       "h2" :"We are team of talented designers making websites with Bootstrap",
+       "get" : "Get Started",
+       "video" : "Watch Video",
+       "lorem1" :"Lorem Ipsum",
+       "lotext1" : "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+       "lorem2" :"Sed ut perspiciatis",
+       "lotext2" : "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+       "lorem3" :"Magni Dolores",
+       "lotext3" : "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+       "lorem4" :"Nemo Enim",
+       "lotext4" : "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+     },
+
+     "about" : {
+      "h2" : "About",
+      "h3" : "Find Out More",
+      "span" : "About Us",
+      "h3-p" :"Voluptatem dignissimos provident quasi corporis voluptates sit assumenda",
+      "p" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "h5" : "Ullamco laboris nisi ut aliquip consequat",
+      "h5-p" :"Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade",
+      "h5-p1" : "Magnam soluta odio exercitationem reprehenderi",
+      "h5-p2" :"Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "happy" : "Happy Clients",
+      "pro" :"Projects",
+      "hours" : "Hours Of Support",
+      "work" :"Hard Workers",
+      "html" : "HTML",
+      "php" : "PHP",
+      "css" : "CSS",
+      "wordpress" : "WORDPRESS/CMS",
+      "javascript" : "JAVASCRIPT",
+      "photoshop" : "PHOTOSHOP"
+    },
+
+    "service" : {
+      "h2" : "Services",
+      "h3" : "Check our",
+      "span" : "Services",
+      "p" : "Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
+      "h4" : "Lorem Ipsum",
+      "h4-p" : "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+      "h41" : "Sed ut perspiciatis",
+      "h41p1" : "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+      "h42" : "Magni Dolores",
+      "h42p2" : "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+      "h43" : "Nemo Enim",
+      "h43p3" :"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis",
+      "h44" : "Dele cardo",
+      "h44p4" : "Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur",
+      "h45" : "Divera don",
+      "h45p5" : "Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur"
+    }
+
+
+  }
