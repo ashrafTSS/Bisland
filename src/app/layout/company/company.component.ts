@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Project } from 'src/app/model/project..model';
 import { ProjectService } from 'src/app/service/project.service';
 
@@ -30,7 +31,8 @@ export class CompanyComponent implements OnInit,AfterViewInit {
   constructor(
     private fb: FormBuilder,
     private projectService: ProjectService,
-    private route:Router
+    private route:Router,
+    private translate:TranslateService
   ) {
     this.projectFrom = fb.group({});
     this.projects = [];

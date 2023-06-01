@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-team',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class TeamComponent {
 
+  constructor(private translate:TranslateService){}
 }
