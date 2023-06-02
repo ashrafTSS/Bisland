@@ -2,9 +2,9 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Company</h2>
-        <h3><span>Company Us</span></h3>
-        <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        <h2>{{'company.h2' | translate}}</h2>
+        <h3><span>{{'company.h3-span' | translate}}</span></h3>
+        <p>{{'company.p' | translate}}</p>
       </div>
       </div>
     </section>
@@ -17,11 +17,11 @@
 
         <div class="add-employee">
           <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
-            data-bs-target="#exampleModal" #addEmployeeButton>Add Employee</button>
+            data-bs-target="#exampleModal" #addEmployeeButton>{{'company.add' | translate}}</button>
         </div>
 
         <div class="search-employees">
-          <input type="search" class="form-control" placeholder="Search Employees"
+          <input type="search" class="form-control" placeholder="{{'company.search' | translate}}"
              #searchInput (input)="searchProject(searchInput.value)">
         </div>
 
@@ -31,7 +31,7 @@
       <div class="employees" >
         <div class="row mt-5" *ngIf="projects.length == 0">
           <div class="col text-center">
-            <span class="text-secondary fs-2 fw-bold fst-italic">There are No Employees Added!</span>
+            <span class="text-secondary fs-2 fw-bold fst-italic">{{'company.no-emp' | translate}}</span>
           </div>
         </div>
 
@@ -49,7 +49,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Enter Employee Information</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{'company.emp-info' | translate}}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
@@ -59,28 +59,28 @@
               <!-- FIRST AND LAST NAME -->
               <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="First Name" formControlName="firstname">
+                  <input type="text" class="form-control" placeholder="{{'company.f-name' | translate}}" formControlName="firstname">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname">
+                  <input type="text" class="form-control" placeholder="{{'company.l-name' | translate}}" formControlName="lastname">
                 </div>
               </div>
 
               <!-- PERSONAL INFORMATION -->
               <div class="row mt-5">
                 <div class="col form-heading">
-                  <h6 class="text-secondary fst-italic">Personal Information</h6>
+                  <h6 class="text-secondary fst-italic">{{'company.personal' | translate}}</h6>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <label for="datepicker" class="form-label">Birthdate</label>
+                  <label for="datepicker" class="form-label">{{'company.birth' | translate}}</label>
                   <input type="date" class="form-control" id="datepicker" formControlName="birthday">
                 </div>
                 <div class="col">
                   <div class="row">
-                    <h6 class="text-secondary">Gender</h6>
+                    <h6 class="text-secondary">{{'company.gender' | translate}}</h6>
                   </div>
 
                   <div class="row">
@@ -88,12 +88,12 @@
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="gender" id="male" value="m"
                           formControlName="gender">
-                        <label class="form-check-label" for="male">Male</label>
+                        <label class="form-check-label" for="male">{{'company.male' | translate}}</label>
                       </div>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="gender" id="female" value="f"
                           formControlName="gender">
-                        <label class="form-check-label" for="female">Female</label>
+                        <label class="form-check-label" for="female">{{'company.female' | translate}}</label>
                       </div>
                     </div>
                   </div>
@@ -103,7 +103,7 @@
               <div class="row mt-3">
                 <div class="col">
                   <select class="form-select" formControlName="project">
-                    <option value="default" selected>Select your Project</option>
+                    <option value="default" selected>{{'company.pro' | translate}}</option>
                     <option *ngFor="let project of projectsOptions; let i = index;" value="{{i}}">
                       {{project |titlecase}}
                     </option>
@@ -113,7 +113,7 @@
 
               <div class="row mt-3">
                 <div class="col">
-                  <label for="profile" class="form-label">Profile Image</label>
+                  <label for="profile" class="form-label">{{'company.p-image' | translate}}</label>
                   <input type="file" class="form-control" id="profile" #fileInput>
                 </div>
               </div>
@@ -121,30 +121,30 @@
               <!-- JOB INFORMATION -->
               <div class="row mt-5">
                 <div class="col form-heading">
-                  <h6 class="text-secondary fst-italic">Job Information</h6>
+                  <h6 class="text-secondary fst-italic">{{'company.job' | translate}}</h6>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Company Name" formControlName="company">
+                  <input type="text" class="form-control" placeholder="{{'company.com-name' | translate}}" formControlName="company">
                 </div>
               </div>
 
               <div class="row mt-3">
                 <div class="col">
-                  <input type="number" class="form-control" placeholder="Job Experience (yrs)"
+                  <input type="number" class="form-control" placeholder="{{'company.jp-ex' | translate}}"
                     formControlName="jobExperience">
                 </div>
                 <div class="col">
-                  <input type="number" class="form-control" placeholder="Salary (LPA)" formControlName="salary">
+                  <input type="number" class="form-control" placeholder="{{'company.salary' | translate}}" formControlName="salary">
                 </div>
               </div>
             </form>
 
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="addProject()">Submit</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="addProject()">{{'company.btn-sub' | translate}}</button>
           </div>
         </div>
       </div>

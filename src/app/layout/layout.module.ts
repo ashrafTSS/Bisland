@@ -19,6 +19,8 @@ import { EmpInfoComponent } from './emp-info/emp-info.component';
 import { RxjComponent } from './rxj/rxj.component';
 import { TranslateModule } from '@ngx-translate/core';
 
+//ngx-owl carousel
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
+    CarouselModule
   ],
   exports : [],
   providers: [],

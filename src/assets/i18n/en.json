@@ -65,7 +65,23 @@
       "h44" : "Dele cardo",
       "h44p4" : "Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur",
       "h45" : "Divera don",
-      "h45p5" : "Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur"
+      "h45p5" : "Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur",
+      "tes-h3":"Saul Goodman",
+      "tes-h4":"Ceo",
+      "tes-am":"Founder",
+      "tes-p":" Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper",
+      "tes-h32":"Sara Wilsson",
+      "tes-h42":"Designer",
+      "tes-p2":" Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa",
+       "tes-h33":"Jena Karlis",
+      "tes-h43":"Store Owner",
+      "tes-p3":"  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+      "tes-h34":"Matt Brandon",
+      "tes-h44":"Freelancer",
+      "tes-p4":" Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+      "tes-h35":"John Larson",
+      "tes-h45":"Entrepreneur",
+      "tes-p5":"   Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid."
     },
 
     "portfolio" : {
@@ -167,7 +183,67 @@
     },
 
     "company":{
-      
+      "h2" : "Company",
+      "h3-span":"Company Us",
+      "p":"Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
+      "add":"Add Employee",
+      "search":"Search Employees",
+      "no-emp" : "There are No Employees Added!",
+      "emp-info":"Enter Employee Information",
+      "personal":"Personal Information",
+      "birth" :"Birthdate",
+      "gender":"Gender",
+      "male":"Male",
+      "female":"Female",
+      "pro":"Select your Project",
+      "p-image":"Profile Image",
+      "job":"Job Information",
+      "btn-sub":"Submit",
+       "jp-ex":"Job Experience (yrs)",
+       "salary":"Salary (LPA)",
+       "com-name":"Company Name",
+       "f-name":"First Name",
+       "l-name":"Last Name"
+    },
+
+    "rxjs":{
+        "h2":"Rxjs",
+        "h3-span":"Rxjs Us",
+        "p":"Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
+        "plunk":"Plunk Rxjs Operation",
+        "p-btn":"Plunk",
+        "t-btn":"Tap"
+    },
+
+    "footer":{
+      "h4":"Join Our Newsletter",
+      "p":"Tamen quem nulla quae legam multos aute sint culpa legam noster magna",
+      "sub":"Subscribe",
+      "h3":"BizLand",
+      "h3-p1":"A108 Adam Street",
+      "h3-p2":"New York, NY 535022",
+      "h3-p3":" United States",
+      "phone":"Phone",
+      "email":"Email",
+      "link":"Useful Links",
+      "link-1":"Home",
+      "link-2":"About us",
+      "link-3":"Services",
+      "link-4":"Terms of service",
+      "link-5":"Privacy policy",
+      "service":"Our Services",
+      "service-1":"Web Design",
+      "service-2":"Web Development",
+      "service-3":"Product Management",
+      "service-4":"Marketing",
+      "service-5":"Graphic Design",
+      "net":"Our Social Networks",
+      "car":"Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies",
+      "cpy":"Copyright",
+      "f-name":"BizLand",
+      "all":"All Rights Reserved",
+      "des":" Designed by",
+      "ash":"Ashraf"
     }
 
 

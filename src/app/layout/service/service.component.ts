@@ -10,4 +10,5 @@ export class ServiceComponent {
 
   constructor(private translate:TranslateService){}
 
+
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription, from, interval, map, pluck, tap, toArray } from 'rxjs';
 
 @Component({
@@ -9,7 +10,7 @@ import { Subscription, from, interval, map, pluck, tap, toArray } from 'rxjs';
 export class RxjComponent {
   myColor: string = '';
 
-  constructor(){}
+  constructor(private translate:TranslateService){}
 
   dataUser:string = '';
   //plunk
